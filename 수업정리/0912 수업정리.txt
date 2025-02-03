@@ -1,0 +1,19 @@
+제어구조
+>순차구조
+>선택구조 : if, switch
+>반복구조 : for, while, do while
+
+int main(){
+    bool b;
+    b = (1 == 2); // 1과 2는 같지 않으므로 0(false)가 b의 값이 됨
+
+    cout << std::boolalpha; //부울 값을 true 또는 false로 출력하게 함. 이것이 없으면 0이나 1로 출력하게 된다.
+    cout << b << endl;
+
+    return 0;
+}
+
+continue
+>다음에 있는 후속 코드들을 건너뛰고 while일 경우 바로 조건으로 넘어가고, for문일 경우 증감, 조건순으로 넘어감
+
+컨트롤 z를 입력하게 되면 0값을 반환한다.

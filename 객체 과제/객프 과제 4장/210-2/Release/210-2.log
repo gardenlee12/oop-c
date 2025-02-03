@@ -1,0 +1,6 @@
+﻿  210-2.cpp
+G:\다른 컴퓨터\내 노트북\학교\2학년 2학기\객프2\과제\객프 과제 4장\210-2\210-2.cpp(24,13): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  코드를 생성하고 있습니다.
+  Previous IPDB not found, fall back to full compilation.
+g:\�ٸ� ��ǻ��\�� ��ʈ��\�б�\2�г� 2�б�\����2\����\���� ���� 4��\210-2\210-2.cpp : fatal error C1083: 컴파일러 중간 파일 파일을 열 수 없습니다. 'Release\210-2.ipdb': Permission denied
+LINK : fatal error LNK1257: 코드를 생성하지 못했습니다.

@@ -1,0 +1,6 @@
+﻿  117-9.cpp
+G:\다른 컴퓨터\내 노트북\학교\2학년 2학기\객프2\과제\객프 과제 2장\117-9\117-9.cpp(9,24): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다.
+  Previous IOBJ not found, fall back to full compilation.
+g:\�ٸ� ��ǻ��\�� ��ʈ��\�б�\2�г� 2�б�\����2\����\���� ���� 2��\117-9\117-9.cpp : fatal error C1083: 컴파일러 중간 파일 파일을 열 수 없습니다. 'x64\Release\117-9.ipdb': Permission denied
+LINK : fatal error LNK1257: 코드를 생성하지 못했습니다.

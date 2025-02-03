@@ -1,0 +1,97 @@
+클래스의 인터페이스와 구현의 분리
+
+멤버 함수를 클래스 외부에서 정의할 수 있다.
+
+class Circle {
+public:
+    double calcArea(); // 멤버함수 프로토타입
+
+    int radius; //반지름
+    string color; //색상
+};
+
+//클래스 외부에서 멤버함수들이 정의된다. 클래스 외부에서 멤버함수를 구현할때는 "클래스 이름::"을 붙인다.
+double Circle::calcArea() {
+    return 3.14*radius*radius;
+}
+
+int main() {
+    Circle c;
+    c.radius = 10; // Circle의 접근 권한을 public으로 해두었기 때문에 radius값의 변환이 가능하다.
+    cout << c.calcArea() << endl;
+    return 0;
+}
+
+-car.h-
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Car{
+    int speed;
+    int gear;
+    string color;
+public:             ---------------------------------------------- 이 아래는 공용멤버이고 위는 전용멤버이다. public위의 멤버들은 접근권한이 지정되어 있지 않아 기본적으로 private가 생략되어 있다고 봐야함.
+    int getSpeed();      // 프로토타입 
+    void setSpeed(int s); // 프로토타입
+};
+
+멤버 함수의 몸체는 별도의 소스 파일 car.cpp에서 정의된다. 주의할점은 car.cpp에서도 car.h를 반드시 포함해야한다는 점이다.
+
+
+-car.cpp
+#include "car.h"
+using namespace std;//생략가능
+
+int Car::getSpeed(){
+    return speed;
+}
+void Car::setSpeed(int s){
+    speed = s;
+}
+
+다른 소스 파일에서 이 클래스를 사용하려면 헤더파일만을 포함하면 된다.
+
+-main.cpp
+#include "car.h"
+
+int main(){
+    Car myCar;
+
+    myCar.setSpeed(80);
+    cout << "현재 속도는 " << myCar.getSpeed() << endl;
+
+    return 0;
+}
+
+간단한 파일의 경우는 한번에 하는것이 편리하지만 복잡해질 경우 분리하는것이 더욱 편리하다.
+
+캡슐화 : 관련된 데이터와 알고리즘이 하나의 묶음으로 정리된것
+데이터는 보이지 않고 알고리즘은 보임.
+첫번째 목적은 사용의 편리성을 위해 데이터와 알고리즘을 하나로 묶는것.
+두번째 목적은 객체의 실제 구현 내용을 외부에 감추는것. 이를 정보은닉이라고 한다.
+
+외부에서 객체를 사용하기 위해서는 객체의 멤버함수만을 이용하여 객체를 사용할 수 있다.
+
+상속 : 기존의 코드를 재활용하기 위한 기법.
+이미 작성된 클래스(부모 클래스)를 이어받아 새로운 클래스(자식 클래스)를 생성하는 기법
+자식 클래스는 부모 클래스의 모든 속성과 동작을 물려받는다.
+추가로 자식 클래스에만 필요한 기능이 있다면 추가 또는 변경할 수 있다.
+
+class Shape {
+protected:
+    int x, y;
+public:
+    void draw() {  };
+    void move() {  };
+};
+
+class Rectangle : shape {
+public:
+    int width, height;
+    int calcArea() {
+        return width*height;
+    }
+}
+
+    

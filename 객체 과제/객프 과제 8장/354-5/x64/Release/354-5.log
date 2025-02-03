@@ -1,0 +1,7 @@
+﻿  354-5.cpp
+G:\다른 컴퓨터\내 노트북\학교\2학년 2학기\객프2\과제\객프 과제 8장\354-5\354-5.cpp(50,13): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  코드를 생성하고 있습니다.
+  Previous IPDB not found, fall back to full compilation.
+G:\다른 컴퓨터\내 노트북\학교\2학년 2학기\객프2\과제\객프 과제 8장\354-5\354-5.cpp(43): warning C4715: 'Myclass::getStudentName': 모든 제어 경로에서 값을 반환하지는 않습니다.
+g:\�ٸ� ��ǻ��\�� ��ʈ��\�б�\2�г� 2�б�\����2\����\���� ���� 8��\354-5\354-5.cpp : fatal error C1083: 컴파일러 중간 파일 파일을 열 수 없습니다. 'x64\Release\354-5.ipdb': Permission denied
+LINK : fatal error LNK1257: 코드를 생성하지 못했습니다.

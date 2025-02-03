@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class Box{
+    double length;
+    double width;
+    double height;
+public:
+    Box(double l = 0.0, double w = 0.0, double h = 0.0) : length(l), width(w), height(h){}
+    double Volume(){
+        return length * width * height;
+    }
+    void print(){
+        cout << "상자의 길이 : " << length << endl;
+        cout << "상자의 너비 : " << width << endl;
+        cout << "상자의 높이 : " << height << endl;
+        cout << "상자의 부피 : " << Volume() << endl;
+    }
+    bool operator<(Box& b2){
+        return Volume() < b2.Volume();
+    }
+};
+
+int main(){
+    Box box1(10, 10, 10);
+    Box box2(20, 20, 20);
+    box1.print();
+    cout << endl;
+    box2.print();
+    cout << endl;
+    cout << boolalpha << (box1 < box2) << endl;
+}
